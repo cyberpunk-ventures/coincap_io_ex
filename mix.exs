@@ -3,7 +3,7 @@ defmodule CoincapIo.Mixfile do
 
   def project do
     [app: :coincap_io,
-     version: "0.0.1",
+     version: "0.0.2",
      elixir: "~> 1.2",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -34,7 +34,7 @@ defmodule CoincapIo.Mixfile do
 
   defp deps do
     [
-      {:poison, "~> 1.5"},
+      {:poison, "~> 2.0"},
       {:httpoison, "~> 0.8"},
       {:credo, "~> 0.3", only: [:test,:dev]},
       {:ex_doc, ">= 0.0.0", only: [:dev]},
