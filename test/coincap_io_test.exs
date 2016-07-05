@@ -3,6 +3,6 @@ defmodule CoincapIoTest do
   doctest CoincapIo
 
   test "front API method" do
-    assert is_list(CoincapIo.front)
+    assert Vex.valid?(CoincapIo.front)
   end
 end
