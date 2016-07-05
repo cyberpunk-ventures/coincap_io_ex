@@ -34,7 +34,37 @@ defmodule CoincapIo do
   @spec front :: List.t()
   def front do
     {:ok, response} = CoincapIo.get("/front")
-    response.body
+    for i <- response.body, do: CoincapIo.FrontResponse.new(i)
   end
+
+end
+
+
+defmodule CoincapIo.FrontResponse do
+  defstruct [
+      position24: "",
+      position: "",
+      short: "",
+      long: "",
+      time: 0,
+      price: 0.0,
+      perc: "",
+      volume: "",
+      usdVolume: "",
+      cap24hrChange: "",
+      mktcap: 0,
+      supply: "",
+      published: nil,
+      vwapData: 0.0,
+      vwapDataBTC: 0.0,
+      shapeshift: nil
+     ]
+
+    use ExConstructor
+    use Vex.Struct
+
+    validates :short, presence: true
+    validates :price, presence: true
+    validates :supply, presence: true
 
 end

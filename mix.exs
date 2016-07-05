@@ -38,7 +38,8 @@ defmodule CoincapIo.Mixfile do
       {:httpoison, "~> 0.8"},
       {:credo, "~> 0.3", only: [:test,:dev]},
       {:ex_doc, ">= 0.0.0", only: [:dev]},
-      {:exconstructor, ">= 1.0.0"}
+      {:exconstructor, ">= 1.0.0"},
+      {:vex, ">= 0.0.0"}
     ]
   end
 end
