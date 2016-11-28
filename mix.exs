@@ -3,7 +3,7 @@ defmodule CoincapIo.Mixfile do
 
   def project do
     [app: :coincap_io,
-     version: "0.0.3",
+     version: "0.0.4",
      elixir: "~> 1.2",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -27,7 +27,7 @@ defmodule CoincapIo.Mixfile do
   defp package do
     [
      files: ["lib", "priv", "mix.exs", "README*", "readme*", "LICENSE*", "license*"],
-     maintainers: ["Vitalik Daniuk"],
+     maintainers: ["ontofractal"],
      licenses: ["MIT"],
      links: %{"GitHub" => "https://github.com/cyberpunk-ventures/coincap_io_ex"}]
   end
@@ -35,8 +35,8 @@ defmodule CoincapIo.Mixfile do
   defp deps do
     [
       {:poison, "~> 2.0"},
-      {:httpoison, "~> 0.8"},
-      {:credo, "~> 0.3", only: [:test,:dev]},
+      {:httpoison, "~> 0.10"},
+      {:credo, "~> 0.5.0", only: [:test,:dev]},
       {:ex_doc, ">= 0.0.0", only: [:dev]},
       {:exconstructor, ">= 1.0.0"},
       {:vex, ">= 0.0.0"}
