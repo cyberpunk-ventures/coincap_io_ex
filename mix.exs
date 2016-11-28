@@ -26,7 +26,7 @@ defmodule CoincapIo.Mixfile do
 
   defp package do
     [
-     files: ["lib", "priv", "mix.exs", "README*", "readme*", "LICENSE*", "license*"],
+     files: ["lib", "mix.exs", "README*", "readme*", "LICENSE*"],
      maintainers: ["ontofractal"],
      licenses: ["MIT"],
      links: %{"GitHub" => "https://github.com/cyberpunk-ventures/coincap_io_ex"}]
